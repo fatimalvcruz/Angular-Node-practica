@@ -13,7 +13,7 @@
      <tbody class="p-2 bg-light border"  >
       <tr class="table-secondary">
         <th scope="row" >Fecha de registro</th>
-        <td>{{clientDetails.createdAt}}</td>
+        <td>{{clientDetails.createdAt | date:' dd/MM/yyy' }}</td>
       </tr>
      <tr>
         <th scope="row">Nombre</th>
