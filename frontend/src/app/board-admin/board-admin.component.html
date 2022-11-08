@@ -1,5 +1,25 @@
 <div class="container">
-  <header class="jumbotron">
-    <p>{{ content }}</p>
+  <header class="pt-3 mb-4 border-bottom center" >
+    <p class="lead mx-auto ">{{ content }}</p>
   </header>
-</div>
+  <p class=" lead mx-auto" style="width: 200px;" >Listado de Clientes</p>
+  <div class="text-center" *ngIf="cargando">
+    <div class="spinner-border" role="status"></div>
+  </div>
+  <div class="lead mx-auto pt-5" style="width: 230px;" *ngIf="error">{{mensaje}}</div>
+  <table class="table p-2 bg-light border mx-auto"  *ngFor="let client of clientsList">
+    <thead>
+      <tr class="table-secondary "> 
+        <th scope="col mx-auto" style="width: 200px;">Id</th>
+        <th scope="col mx-auto"  style="width: 200px;">Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row " >{{client.id}}</td>
+        <td style="cursor: pointer;"  [routerLink]="['/client', client.id]">{{client.name}} {{client.lastname}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+

@@ -13,6 +13,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { ClientComponent } from './client/client.component'
+
+
+
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
@@ -25,7 +29,9 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     ProfileComponent,
     BoardAdminComponent,
     BoardModeratorComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    LoginComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,

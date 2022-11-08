@@ -26,4 +26,13 @@ export class UserService {
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
+  /*Mio */
+  getAdminClient(): Observable<any> {
+    return this.http.get(API_URL + 'clients');
+  }
+
+  getAdminClientbyId(client_id: String):  Observable<any> {
+    return this.http.get(API_URL + 'client/' + client_id);
+
+  }
 }

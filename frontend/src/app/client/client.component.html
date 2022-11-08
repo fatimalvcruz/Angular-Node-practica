@@ -1,0 +1,48 @@
+
+<div class="container">
+  <header class="pt-3 mb-4 border-bottom center" >
+    <p class="lead mx-auto ">Detalle del Cliente</p>
+  </header>
+
+  <div class="text-center" *ngIf="cargando">
+    <div class="spinner-border" role="status"></div>
+  </div>
+  <div class="lead mx-auto pt-5" style="width: 230px;" *ngIf="error">{{mensaje}}</div>
+  <div *ngIf="clientDetails">
+  <table class="table mx-auto" style="width: 500px;" >
+     <tbody class="p-2 bg-light border"  >
+      <tr class="table-secondary">
+        <th scope="row" >Fecha de registro</th>
+        <td>{{clientDetails.createdAt}}</td>
+      </tr>
+     <tr>
+        <th scope="row">Nombre</th>
+        <td>{{clientDetails.name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Apellido</th>
+        <td>{{clientDetails.lastname}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Emrpresa</th>
+        <td>{{clientDetails.company}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td>{{clientDetails.email}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Ciudad</th>
+        <td>{{clientDetails.city}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Dirección</th>
+        <td>{{clientDetails.address}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Código Postal</th>
+        <td>{{clientDetails.cp}}</td>
+      </tr> 
+    </tbody> 
+  </table>
+</div> 
